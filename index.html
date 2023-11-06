@@ -2,19 +2,64 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Add CSS styles for mobile responsiveness */
+        .bg-container {
+            background-color: #333;
+            /* Background color for the container */
+            padding: 20px;
+            /* Add padding for better spacing on mobile */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* Stack form elements vertically on mobile */
+            align-items: center;
+            /* Center horizontally on mobile */
+            text-align: center;
+            /* Center text in the form */
+        }
+
+        form {
+            max-width: 80%;
+            /* Adjust the form's width for mobile */
+        }
+
+        /* Mobile input fields styles */
+        .mobile-input {
+            width: 100%;
+            /* Take up the full width on mobile */
+            margin-bottom: 10px;
+            /* Add spacing between input fields */
+            padding: 10px;
+            /* Add padding for touch-friendly input fields */
+        }
+
+        /* Style for the submit button */
+        #submit {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="bg-container ">
-        <div class="container d-flex flex-row justify-content-center">
+    <div class="bg-container">
+        <div class="container">
             <!-- Center the form horizontally -->
             <form method="post" action="https://script.google.com/macros/s/AKfycbz8rGXkfvBeer90OnOKQZZ9ZV3wf8luGq8WIigThoS2BVZ1ztwJVrg54YuTv_FZ7XFe/exec" name="contact-form">
                 <h4>Contact Us</h4>
                 <input type="text" name="your-name" placeholder="Name" class="mobile-input">
-                <input type="text" name="your-number" placeholder="Number" class="mobile-input">
+                <input type="tel" name="your-number" placeholder="Number" class="mobile-input">
                 <input type="email" name="your-email" placeholder="Email" class="mobile-input">
-                <p style="color:white;font-size:20px;">Book A Slot</p>
+                <p style="color:white; font-size: 20px;">Book A Slot</p>
                 <input type="date" id="november-date" name="date" placeholder="Date" min="2023-11-01" max="2023-11-30" class="mobile-input">
                 <textarea class="message mobile-input" name="message" rows="3" placeholder="Your Message"></textarea>
                 <input type="submit" value="Submit" id="submit">
