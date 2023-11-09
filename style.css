@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -19,7 +20,6 @@ body {
     border: 1px solid #eeeeee;
     border-radius: 10px;
     background-color: #003b5b;
-    margin: 0 auto;
 }
 
 h4 {
@@ -39,6 +39,22 @@ textarea {
     padding: 10px;
 }
 
+.bg-container {
+    background-image: url("https://res.cloudinary.com/dd70o0ihc/image/upload/v1666195600/cld-sample-2.jpg");
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
 #submit {
     border: none;
     background-color: orangered;
@@ -48,33 +64,6 @@ textarea {
     border-radius: 5px;
 }
 
-.bg-container {
-    background-image: url("https://res.cloudinary.com/dd70o0ihc/image/upload/v1699008424/back_page_ucttfa.jpg");
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-}
-
 #submit:hover {
     background-color: #333333;
-}
-
-.bg-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* This will make the container take the full height of the viewport */
-}
-
-/* Add styles to increase the size of form elements on smaller screens */
-@media (max-width: 767px) {
-    .mobile-input {
-        width: 90%;
-        /* Adjust the width as needed */
-        padding: 10px;
-        /* Adjust the padding as needed */
-        font-size: 18px;
-        /* Increase the font size */
-    }
 }
