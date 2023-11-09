@@ -57,10 +57,23 @@
             <form method="post" action="https://script.google.com/macros/s/AKfycbz8rGXkfvBeer90OnOKQZZ9ZV3wf8luGq8WIigThoS2BVZ1ztwJVrg54YuTv_FZ7XFe/exec" name="contact-form">
                 <h4>Contact Us</h4>
                 <input type="text" name="your-name" placeholder="Name" class="mobile-input">
-                <input type="tel" name="your-number" placeholder="Number" class="mobile-input">
+                <input type="tel" name="your-number" placeholder="Number" class "mobile-input">
                 <input type="email" name="your-email" placeholder="Email" class="mobile-input">
-                <p style="color:white; font-size: 20px;">Book A Slot</p>
-                <input type="date" id="november-date" name="date" placeholder="Date" min="2023-11-01" max="2023-11-30" class="mobile-input">
+
+                <div class="mb-3">
+                    <label for="status" style="color:white;">Preferred Slot of Training</label>
+                    <select id="status" name="preferred-slot-of-training" class="form-control">
+                        <option style="height:50px;" value="Inactive">select</option>
+                        <option value="13 NOV - 19 NOV">13 Nov - 17 Nov</option>
+                        <option value="20 NOV - 26 NOV">20 Nov - 24 Nov</option>
+                        <option value="27 NOV - 03 DEC">27 Nov - 01 Dec</option>
+                        <option value="04 DEC - 10 DEC">04 Dec - 08 Dec</option>
+                        <option value="11 DEC - 17 DEC">11 Dec - 15 Dec</option>
+                        <option value="18 DEC - 24 DEC">18 Dec - 22 Dec</option>
+                        <option value="25 DEC - 31 DEC">25 Dec - 29 Dec</option>
+                    </select>
+                </div>
+
                 <textarea class="message mobile-input" name="message" rows="3" placeholder="Your Message"></textarea>
                 <input type="submit" value="Submit" id="submit">
             </form>
