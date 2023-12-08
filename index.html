@@ -55,7 +55,7 @@
         <div class="container">
             <!-- Center the form horizontally -->
             <form method="post" action="https://script.google.com/macros/s/AKfycbz8rGXkfvBeer90OnOKQZZ9ZV3wf8luGq8WIigThoS2BVZ1ztwJVrg54YuTv_FZ7XFe/exec" name="contact-form">
-                <h4>Contact Us</h4>
+                <h4>Fill the Form</h4>
                 <input type="text" name="your-name" placeholder="Name" class="mobile-input">
                 <input type="tel" name="your-number" placeholder="Number" class "mobile-input">
                 <input type="email" name="your-email" placeholder="Email" class="mobile-input">
@@ -73,8 +73,18 @@
                         <option value="25 DEC - 31 DEC">25 Dec - 29 Dec</option>
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label for="status" style="color:white;">Location</label>
+                    <select id="status" name="Location" class="form-control">
+                        <option value="Active">Select</option>
+                        <option value="Inactive">Hyderbad</option>
+                        <option value="Inactive">Warangal</option>
+                    </select>
+                </div>
+
 
                 <textarea class="message mobile-input" name="message" rows="3" placeholder="Your Message"></textarea>
+                <p style="color:white;">Fell Free to call : 8919527376</p>
                 <input type="submit" value="Submit" id="submit">
             </form>
         </div>
