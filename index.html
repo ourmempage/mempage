@@ -4,43 +4,80 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
-    
+    <style>
+        /* Add CSS styles for mobile responsiveness */
+        .bg-container {
+            background-color: #333;
+            /* Background color for the container */
+            padding: 20px;
+            /* Add padding for better spacing on mobile */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* Stack form elements vertically on mobile */
+            align-items: center;
+            /* Center horizontally on mobile */
+            text-align: center;
+            /* Center text in the form */
+        }
+
+        form {
+            max-width: 80%;
+            /* Adjust the form's width for mobile */
+        }
+
+        /* Mobile input fields styles */
+        .mobile-input {
+            width: 100%;
+            /* Take up the full width on mobile */
+            margin-bottom: 10px;
+            /* Add spacing between input fields */
+            padding: 10px;
+            /* Add padding for touch-friendly input fields */
+        }
+
+        /* Style for the submit button */
+        #submit {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style for the success message */
+        #success-message {
+            color: #4caf50;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Center the form horizontally -->
-        <div class="card">
+    <div class="bg-container">
+        <div class="container">
+            <!-- Center the form horizontally -->
             <form method="post" action="https://script.google.com/macros/s/AKfycbz8rGXkfvBeer90OnOKQZZ9ZV3wf8luGq8WIigThoS2BVZ1ztwJVrg54YuTv_FZ7XFe/exec" name="contact-form" onsubmit="showSuccess()">
-                <h4 style="color:white;">Fill the Form</h4>
-                <input type="text" name="your-name" placeholder="Name" class="input-field">
-                <input type="tel" name="your-number" placeholder="Number" class="input-field">
-                <input type="email" name="your-email" placeholder="Email" class="input-field">
+                <h4>Fill the Form</h4>
+                <input type="text" name="your-name" placeholder="Name" class="mobile-input">
+                <input type="tel" name="your-number" placeholder="Number" class="mobile-input">
+                <input type="email" name="your-email" placeholder="Email" class="mobile-input">
                 <div class="mb-3">
                     <label for="status" style="color:white;">Preferred Slot of Training</label>
-                    <select id="status" name="preferred-slot-of-training" class="input-field">
-                        <option value="Inactive">Select</option>
-                        <option value="13 NOV - 19 NOV">13 Nov - 17 Nov</option>
-                        <option value="20 NOV - 26 NOV">20 Nov - 24 Nov</option>
-                        <option value="27 NOV - 03 DEC">27 Nov - 01 Dec</option>
-                        <option value="04 DEC - 10 DEC">04 Dec - 08 Dec</option>
-                        <option value="11 DEC - 17 DEC">11 Dec - 15 Dec</option>
-                        <option value="18 DEC - 24 DEC">18 Dec - 22 Dec</option>
-                        <option value="25 DEC - 31 DEC">25 Dec - 29 Dec</option>
-                        <!-- Add other options as needed -->
+                    <select id="status" name="preferred-slot-of-training" class="form-control">
+                        <!-- Options... -->
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="location" style="color:white;">Location</label>
-                    <select id="location" name="your-address" class="input-field">
-                        <option value="Active">Select</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Warangal">Warangal</option>
-                        <!-- Add other options as needed -->
+                    <select id="location" name="your-address" class="form-control">
+                        <!-- Options... -->
                     </select>
                 </div>
-                <textarea class="input-field" name="message" rows="3" placeholder="Your Message"></textarea>
-                <p style="color:white;">Feel Free to call: 8919527376</p>
+                <textarea class="message mobile-input" name="message" rows="3" placeholder="Your Message"></textarea>
+                <p style="color:white;">Feel Free to call : 8919527376</p>
                 <input type="submit" value="Submit" id="submit">
                 <p id="success-message"></p>
             </form>
@@ -51,12 +88,12 @@
     <script>
         function showSuccess() {
             // Display success message
-            document.getElementById('success-message').innerText = 'Submitted successfully!';
+            document.getElementById('success-message').innerText = 'Submitted successfully! Redirecting...';
 
-            // Open YouTube link in a new tab after 5 seconds
+            // Redirect to the specified URL after a short delay
             setTimeout(function () {
-                window.open('http://www.mempagetech.com/annadatadrone.aspx', '_blank'); // Add your link here
-            }, 2000);
+                window.location.href = 'http://www.mempagetech.com/annadatadrone.aspx';
+            }, 3000); // Delay set to 3000 milliseconds (3 seconds)
 
             // Prevent form submission (optional)
             return false;
