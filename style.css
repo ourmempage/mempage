@@ -1,91 +1,50 @@
-
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'poppins', sans-serif;
-    font-size: 18px;
-}
-
 body {
-    height: 100vh;
+    margin: 50px 0 0 0;
+    padding: 0;
+    background-image: url('https://res.cloudinary.com/dekavagme/image/upload/c_scale,w_1920/v1702634422/github_link_bg_image_jkniiv.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container {
-    width: 500px;
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 10px;
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
+    border-radius: 15px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin-top: 80px;
     background-color: #003b5b;
-    margin-top:150px;
-}
-
-h4 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: white;
 }
 
 .form-control {
     width: 100%;
     padding: 10px;
-    width: 100%;
-    padding: 10px;
     margin-bottom: 10px;
-
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 #submit {
     border: none;
     background-color: orangered;
     color: white;
-    width: 200px;
-    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-.bg-container {
-    background-image: url("https://res.cloudinary.com/dekavagme/image/upload/v1702634422/github_link_bg_image_jkniiv.jpg");
-    height: 100%;
-    width:100%;
-
-    background-size: cover;
-}
-
-#submit:hover {
-    background-color: #333333;
-}
-
-.bg-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* This will make the container take the full height of the viewport */
-}
-
-/* Add styles to increase the size of form elements on smaller screens */
-@media (max-width: 767px) {
-    .mobile-input {
-        width: 90%;
-        /* Adjust the width as needed */
-        padding: 10px;
-        /* Adjust the padding as needed */
-        font-size: 18px;
-        /* Increase the font size */
-    }
+p {
+    margin-top: 10px;
+    color: #555;
 }
