@@ -1,90 +1,55 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'poppins', sans-serif;
-    font-size: 18px;
-}
 
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* Add CSS styles for mobile responsiveness */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            background-image: url('https://res.cloudinary.com/dekavagme/image/upload/v1702634422/github_link_bg_image_jkniiv.jpg'); /* Replace 'your-background-image.jpg' with your image URL */
+            background-size: cover;
+            background-attachment: fixed; /* Fixed background */
+        }
 
-.container {
-    width: 500px;
-    padding: 30px;
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
-    background-color: #003b5b;
-    margin-top:150px;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100vh; /* Adjust the height as needed */
+            padding: 5px;
+            background-size:cover;
+            
+        }
 
-h4 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: white;
-}
+        .card {
+            background-color:#003b5b;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin:300px;
+            
+            width: 80%; /* Adjust the card width as needed */
+        }
 
-.form-control {
-    width: 100%;
-    padding: 10px;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+        form {
+            max-width: 100%;
+        }
 
-}
+        .input-field {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
+        #submit {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
 
-textarea {
-    width: 100%;
-    padding: 10px;
-}
-
-#submit {
-    border: none;
-    background-color: orangered;
-    color: white;
-    width: 200px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-.bg-container {
-    background-image: url("https://res.cloudinary.com/dekavagme/image/upload/v1702631074/WhatsApp_Image_2023-12-15_at_14.32.48_ac899202_a25498.jpg");
-    height: 100%;
-    width:100%;
-
-    background-size: cover;
-}
-
-#submit:hover {
-    background-color: #333333;
-}
-
-.bg-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* This will make the container take the full height of the viewport */
-}
-
-/* Add styles to increase the size of form elements on smaller screens */
-@media (max-width: 767px) {
-    .mobile-input {
-        width: 90%;
-        /* Adjust the width as needed */
-        padding: 10px;
-        /* Adjust the padding as needed */
-        font-size: 18px;
-        /* Increase the font size */
-    }
-}
+        #success-message {
+            color: #4caf50;
+            margin-top: 10px;
+        }
