@@ -52,13 +52,6 @@
             color: #4caf50;
             margin-top: 10px;
         }
-
-        /* Style for the link in the success message */
-        #success-link {
-            color: #007bff;
-            text-decoration: underline;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -94,20 +87,16 @@
     <script src="script.js"></script>
     <script>
         function showSuccess() {
-            // Display success message with a link
-            document.getElementById('success-message').innerHTML =
-                'Submitted successfully! Visit <span id="success-link" onclick="openLink()">this link</span> for more information.';
+            // Display success message
+            document.getElementById('success-message').innerText = 'Submitted successfully! Redirecting...';
 
-            // Clear form fields
-            document.forms["contact-form"].reset();
+            // Redirect to the specified URL after a short delay
+            setTimeout(function () {
+                window.location.href = 'http://www.mempagetech.com/annadatadrone.aspx';
+            }, 3000); // Delay set to 3000 milliseconds (3 seconds)
 
             // Prevent form submission (optional)
             return false;
-        }
-
-        function openLink() {
-            // Open the specified link in the same window
-            window.location.href = 'http://www.mempagetech.com/annadatadrone.aspx';
         }
     </script>
 </body>
